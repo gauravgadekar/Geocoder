@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<title> Geocoder </title>
+<head>
+   <link href="./static/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Web Geocoder</h1>
+    <h3> Please enter the file with an adress column</h3><br>
+    <div class="message">
+      {{text|safe}}
+    </div><br>
+    <form action="{{url_for('success')}}" method="POST" enctype="multipart/form-data">
+    <input type=file name="file"><br>
+    <button type="submit">Submit</button>
+  </form>
+  {% include btn ignore missing %}
+  </div>
+</body>
+
+
+</html>
